@@ -1,16 +1,52 @@
-# flutter_clean_mvvm
+# Flutter Clean Architecture with MVVM
 
-A new Flutter project.
+An example Flutter project demonstrating **Clean Architecture** with **MVVM (Model-View-ViewModel)** pattern using **Provider** and **get_it** for dependency injection.
 
-## Getting Started
+This project is based on the article *Flutter Clean Architecture with MVVM* by Mohit Kokane. :contentReference[oaicite:1]{index=1}
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Overview
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+This project illustrates how to structure a Flutter app using:
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- **Separation of concerns**  
+- **Domain-driven design**
+- **Testable and scalable architecture**
+- **MVVM pattern**
+- **Dependency Injection with get_it**
+- **State management with Provider**
+
+---
+
+## 📁 Folder Structure
+
+lib/
+├─ main.dart
+├─ core/
+│ ├─ error/ // custom failures/exceptions
+│ └─ usecase/ // (optional) use cases
+├─ di/
+│ └─ injection.dart // get_it registrations
+├─ data/
+│ ├─ models/
+│ │ └─ product_model.dart
+│ ├─ sources/
+│ │ ├─ product_remote_data_source.dart
+│ │ └─ product_local_data_source.dart
+│ └─ repositories/
+│ └─ product_repository_impl.dart
+├─ domain/
+│ ├─ entities/
+│ │ └─ product.dart
+│ └─ repositories/
+│ └─ product_repository.dart
+├─ presentation/
+│ ├─ viewmodels/
+│ │ └─ product_list_viewmodel.dart
+│ └─ views/
+│ ├─ product_list_page.dart
+│ └─ widgets/
+│ └─ product_tile.dart
+└─ utils/
+└─ constants.dart
