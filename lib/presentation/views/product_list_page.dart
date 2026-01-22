@@ -26,9 +26,29 @@ class _ProductListView extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          IconButton(
+            icon: const Icon(Icons.shopping_cart, color: Colors.white),
+            onPressed: () {},
+          ),
+        ],
         title: const Text('Products', style: TextStyle(color: Colors.white)),
         centerTitle: true,
         backgroundColor: Colors.grey,
+      ),
+      drawer: Drawer(child: ListView(padding: EdgeInsets.zero)),
+      bottomNavigationBar: BottomNavigationBar(
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+            backgroundColor: Colors.black,
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.shopping_cart, color: Colors.black),
+            label: 'Cart',
+          ),
+        ],
       ),
       body: Builder(
         builder: (_) {
